@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Safe Credit Union | Executive Briefing</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0a1628;
@@ -18,10 +18,11 @@
     --success: #1a6b4a;
     --light-bg: #f0ece4;
     --border: rgba(200,151,43,0.25);
+    --teal: #18b4a0;
+    --teal-light: #22d4bb;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -57,14 +58,14 @@
 
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.8rem;
     list-style: none;
   }
 
   .nav-links a {
     color: var(--muted);
     text-decoration: none;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -97,10 +98,8 @@
   .hero::before {
     content: '';
     position: absolute;
-    top: -20%;
-    right: -10%;
-    width: 65vw;
-    height: 65vw;
+    top: -20%; right: -10%;
+    width: 65vw; height: 65vw;
     background: radial-gradient(circle, rgba(26,58,107,0.6) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
@@ -109,10 +108,8 @@
   .hero::after {
     content: '';
     position: absolute;
-    bottom: 5%;
-    left: -5%;
-    width: 30vw;
-    height: 30vw;
+    bottom: 5%; left: -5%;
+    width: 30vw; height: 30vw;
     background: radial-gradient(circle, rgba(200,151,43,0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
@@ -182,8 +179,7 @@
 
   .hero-scroll {
     position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
+    bottom: 2.5rem; left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -199,8 +195,7 @@
 
   .hero-scroll::after {
     content: '';
-    width: 1px;
-    height: 40px;
+    width: 1px; height: 40px;
     background: linear-gradient(to bottom, var(--muted), transparent);
     animation: pulse 2s infinite;
   }
@@ -262,10 +257,7 @@
 
   .summary-card:hover { background: var(--mid-blue); }
 
-  .summary-icon {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-  }
+  .summary-icon { font-size: 1.6rem; margin-bottom: 1.2rem; }
 
   .summary-card h3 {
     font-family: 'Playfair Display', serif;
@@ -296,7 +288,7 @@
 
   .driver-card {
     background: var(--navy);
-    padding: 2rem 2rem;
+    padding: 2rem;
     border-left: 3px solid transparent;
     transition: all 0.25s;
   }
@@ -316,8 +308,7 @@
   }
 
   .driver-dot {
-    width: 7px;
-    height: 7px;
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--accent);
     flex-shrink: 0;
@@ -368,22 +359,12 @@
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 4px;
-    height: 100%;
+    width: 4px; height: 100%;
     background: var(--danger);
   }
 
-  .risk-card h3 {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .risk-card p {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.65;
-  }
+  .risk-card h3 { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.6rem; }
+  .risk-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
 
   /* ─── COMPARISON TABLE ─── */
   .compare-section { background: var(--deep-blue); }
@@ -397,9 +378,7 @@
     border: 1px solid var(--border);
   }
 
-  .compare-table thead {
-    background: var(--mid-blue);
-  }
+  .compare-table thead { background: var(--mid-blue); }
 
   .compare-table th {
     padding: 1rem 1.5rem;
@@ -421,7 +400,6 @@
   }
 
   .compare-table tr:hover td { background: rgba(26,58,107,0.3); }
-
   .compare-table td:first-child { color: var(--muted); font-weight: 500; }
   .compare-table td:nth-child(2) { color: #e8857b; }
   .compare-table td:nth-child(3) { color: #6ec89a; }
@@ -454,18 +432,8 @@
 
   .security-icon { font-size: 1.5rem; margin-bottom: 1rem; }
 
-  .security-card h3 {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-    line-height: 1.3;
-  }
-
-  .security-card p {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.65;
-  }
+  .security-card h3 { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.6rem; line-height: 1.3; }
+  .security-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
 
   .ncua-note {
     margin-top: 2.5rem;
@@ -477,6 +445,388 @@
     color: var(--accent-light);
     line-height: 1.6;
   }
+
+  /* ─── CALCULATOR ─── */
+  .calc-section { background: var(--deep-blue); }
+
+  .calc-container {
+    background: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .calc-inputs { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  .input-group { display: flex; flex-direction: column; gap: 0.3rem; }
+
+  .input-group label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .input-group .hint {
+    font-size: 0.68rem;
+    color: rgba(138,154,181,0.5);
+    font-style: italic;
+  }
+
+  .input-group input, .input-group select {
+    background: var(--deep-blue);
+    border: 1px solid rgba(200,151,43,0.15);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: border-color 0.2s;
+  }
+
+  .input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(200,151,43,0.1);
+  }
+
+  .input-group select {
+    cursor: pointer;
+    -webkit-appearance: none; appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a9ab5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+  }
+
+  select option { background: var(--navy); color: var(--white); }
+
+  .calc-results { display: flex; flex-direction: column; gap: 1rem; }
+
+  .result-box {
+    background: var(--deep-blue);
+    border: 1px solid rgba(200,151,43,0.15);
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    transition: all 0.3s;
+  }
+
+  .result-box .result-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .result-box .result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .result-box .result-value.tb { color: var(--accent-light); }
+  .result-box .result-value.copies { color: #6ec89a; }
+  .result-box .result-value.cost { color: var(--accent); }
+  .result-box .result-detail { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; }
+
+  .calc-chart {
+    margin-top: 1.25rem;
+    background: var(--deep-blue);
+    border: 1px solid rgba(200,151,43,0.15);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .calc-chart h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--muted);
+  }
+
+  .bar-chart { display: flex; flex-direction: column; gap: 0.45rem; }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .bar-row .bar-label {
+    font-size: 0.68rem;
+    width: 55px;
+    text-align: right;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    flex-shrink: 0;
+  }
+
+  .bar-row .bar-track {
+    flex: 1;
+    height: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .bar-row .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s cubic-bezier(.22,1,.36,1);
+  }
+
+  .bar-row .bar-fill.disk { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+
+  .bar-row .bar-value {
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--white);
+    min-width: 60px;
+    flex-shrink: 0;
+  }
+
+  .calc-note {
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    background: rgba(200,151,43,0.06);
+    border: 1px solid rgba(200,151,43,0.15);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .calc-note strong { color: var(--accent-light); }
+
+  .breakdown-toggle {
+    margin-top: 0.8rem;
+    background: none;
+    border: 1px solid rgba(200,151,43,0.2);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .breakdown-toggle:hover { border-color: var(--accent); color: var(--accent-light); }
+
+  .breakdown-table-wrap { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+  .breakdown-table-wrap.open { max-height: 600px; overflow-y: auto; }
+
+  .breakdown-table {
+    width: 100%;
+    font-size: 0.72rem;
+    margin-top: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    border-collapse: collapse;
+  }
+
+  .breakdown-table th {
+    padding: 0.5rem 0.6rem;
+    text-align: right;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .breakdown-table th:first-child { text-align: center; }
+
+  .breakdown-table td {
+    padding: 0.35rem 0.6rem;
+    text-align: right;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .breakdown-table td:first-child { text-align: center; color: var(--white); font-weight: 600; }
+  .breakdown-table tr.highlight-row td { background: rgba(200,151,43,0.08); color: var(--white); }
+
+  /* ─── EXAGRID SIZING ─── */
+  .sizing-section { background: var(--navy); }
+
+  .sizing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .sizing-card {
+    background: var(--deep-blue);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sizing-card.primary { border-color: rgba(106,200,154,0.4); }
+  .sizing-card.dr { border-color: rgba(24,180,160,0.3); }
+
+  .sizing-card .sizing-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .sizing-card.primary .sizing-badge { color: #6ec89a; }
+  .sizing-card.dr .sizing-badge { color: var(--teal-light); }
+
+  .sizing-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .sizing-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.85rem;
+  }
+
+  .sizing-stat:last-child { border-bottom: none; }
+  .sizing-stat .stat-label { color: var(--muted); }
+
+  .sizing-stat .stat-value {
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .sizing-stat .stat-value.green { color: #6ec89a; }
+  .sizing-stat .stat-value.teal { color: var(--teal-light); }
+  .sizing-stat .stat-value.gold { color: var(--accent-light); }
+
+  .sizing-total {
+    margin-top: 1.5rem;
+    background: var(--deep-blue);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sizing-total .total-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  .sizing-total .total-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-light);
+  }
+
+  .sizing-comparison {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .sizing-vs {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .sizing-bar-compare {
+    margin-top: 2rem;
+    background: var(--deep-blue);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+  }
+
+  .sizing-bar-compare h4 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+
+  .compare-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .compare-bar-row .cbar-label {
+    width: 130px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .compare-bar-row .cbar-track {
+    flex: 1;
+    height: 32px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .compare-bar-row .cbar-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.8rem;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--navy);
+    transition: width 1.2s cubic-bezier(.22,1,.36,1);
+  }
+
+  .compare-bar-row .cbar-fill.straight { background: linear-gradient(90deg, #e8857b, #c0392b); }
+  .compare-bar-row .cbar-fill.exagrid { background: linear-gradient(90deg, #6ec89a, #1a6b4a); }
+
+  .sizing-note {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background: rgba(26,106,74,0.08);
+    border: 1px solid rgba(26,106,74,0.25);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #6ec89a;
+    line-height: 1.65;
+  }
+
+  .sizing-note strong { color: #6ec89a; }
 
   /* ─── PROOF POINTS ─── */
   .proof-section { background: var(--deep-blue); }
@@ -495,16 +845,8 @@
     transition: all 0.25s;
   }
 
-  .proof-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
-
-  .proof-org {
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-  }
+  .proof-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .proof-org { font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem; }
 
   .proof-location {
     font-size: 0.75rem;
@@ -536,8 +878,7 @@
     content: '';
     position: absolute;
     top: 28px;
-    left: 2rem;
-    right: 2rem;
+    left: 2rem; right: 2rem;
     height: 2px;
     background: linear-gradient(to right, var(--accent), var(--mid-blue));
     z-index: 0;
@@ -550,8 +891,7 @@
   }
 
   .step-number {
-    width: 56px;
-    height: 56px;
+    width: 56px; height: 56px;
     border-radius: 50%;
     background: var(--deep-blue);
     border: 2px solid var(--accent);
@@ -565,17 +905,8 @@
     margin-bottom: 1.2rem;
   }
 
-  .step h3 {
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .step p {
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+  .step h3 { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .step p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
 
   .poc-box {
     background: rgba(200,151,43,0.08);
@@ -589,18 +920,8 @@
   }
 
   .poc-icon { font-size: 2rem; flex-shrink: 0; }
-
-  .poc-box h3 {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--accent-light);
-  }
-
-  .poc-box p {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.65;
-  }
+  .poc-box h3 { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-light); }
+  .poc-box p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
 
   /* ─── NEXT STEPS ─── */
   .next-section { background: var(--deep-blue); }
@@ -636,11 +957,7 @@
     opacity: 0.5;
   }
 
-  .step-text {
-    font-size: 0.92rem;
-    line-height: 1.65;
-    padding-top: 0.3rem;
-  }
+  .step-text { font-size: 0.92rem; line-height: 1.65; padding-top: 0.3rem; }
 
   /* ─── FOOTER ─── */
   footer {
@@ -667,7 +984,6 @@
     line-height: 1.6;
   }
 
-  /* ─── CTA BUTTON ─── */
   .cta-btn {
     display: inline-block;
     background: var(--accent);
@@ -682,10 +998,7 @@
     transition: background 0.2s, transform 0.15s;
   }
 
-  .cta-btn:hover {
-    background: var(--accent-light);
-    transform: translateY(-1px);
-  }
+  .cta-btn:hover { background: var(--accent-light); transform: translateY(-1px); }
 
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
@@ -709,10 +1022,7 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
+  .reveal.visible { opacity: 1; transform: none; }
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
@@ -722,6 +1032,9 @@
     .migration-steps::before { display: none; }
     .nav-links { display: none; }
     .hero-meta { flex-wrap: wrap; gap: 1.5rem; }
+    .calc-grid, .sizing-grid { grid-template-columns: 1fr; }
+    .sizing-comparison { grid-template-columns: 1fr; }
+    .sizing-vs { text-align: center; }
   }
 </style>
 </head>
@@ -732,12 +1045,12 @@
   <div class="nav-brand">Safe Credit Union</div>
   <ul class="nav-links">
     <li><a href="#summary">Overview</a></li>
-    <li><a href="#drivers">Business Drivers</a></li>
-    <li><a href="#risks">Current Risks</a></li>
+    <li><a href="#drivers">Drivers</a></li>
     <li><a href="#compare">Comparison</a></li>
     <li><a href="#security">Security</a></li>
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#sizing">ExaGrid Sizing</a></li>
     <li><a href="#proof">Proof Points</a></li>
-    <li><a href="#migration">Migration</a></li>
     <li><a href="#nextsteps">Next Steps</a></li>
   </ul>
   <span class="nav-badge">Confidential</span>
@@ -758,8 +1071,8 @@
       <div class="hero-meta-value">Veeam + ExaGrid</div>
     </div>
     <div class="hero-meta-item">
-      <div class="hero-meta-label">Incumbent</div>
-      <div class="hero-meta-value">HPE StoreOnce (EOL)</div>
+      <div class="hero-meta-label">Current Platform</div>
+      <div class="hero-meta-value">HPE StoreOnce</div>
     </div>
     <div class="hero-meta-item">
       <div class="hero-meta-label">Classification</div>
@@ -799,7 +1112,7 @@
 <section id="drivers" class="drivers-section">
   <div class="section-label">Context</div>
   <div class="section-title">Safe CU Business Drivers</div>
-  <p class="section-lead">HPE StoreOnce is approaching end of life during a broader infrastructure review — creating an opportunity to align backup architecture with business continuity and financial discipline.</p>
+  <p class="section-lead">An infrastructure review creates an opportunity to align backup architecture with business continuity and financial discipline.</p>
   <div class="drivers-grid reveal">
     <div class="driver-card">
       <div class="driver-title"><div class="driver-dot"></div> Member Trust & Uptime</div>
@@ -822,8 +1135,8 @@
       <p>Financial institutions face elevated targeting. Backup is the last line of defense — and must be hardened against threat actors who target backups first.</p>
     </div>
     <div class="driver-card">
-      <div class="driver-title"><div class="driver-dot"></div> Infrastructure Review Timing</div>
-      <p>The EOL status of StoreOnce creates an evaluation window — the right moment to reassess the total backup architecture rather than make a like-for-like swap.</p>
+      <div class="driver-title"><div class="driver-dot"></div> Data Growth Management</div>
+      <p>Data volumes continue to grow. The backup solution must scale seamlessly without performance degradation or disruptive forklift upgrades.</p>
     </div>
   </div>
 </section>
@@ -864,8 +1177,7 @@
 <section id="compare" class="compare-section">
   <div class="section-label">Side-by-Side Analysis</div>
   <div class="section-title">Decision Matrix: Three Options</div>
-  <p class="section-lead">Safe CU previously requested a pro/con analysis. This matrix directly addresses that requirement across the key dimensions that matter to your team.</p>
-
+  <p class="section-lead">A pro/con analysis across the key dimensions that matter to your team.</p>
   <div style="overflow-x:auto;" class="reveal">
     <table class="compare-table">
       <thead>
@@ -877,84 +1189,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Ingest Performance (max system)</td>
-          <td>72–144 TB/hr</td>
-          <td>649 TB/hr (4.5–9× faster)</td>
-          <td>Bandwidth-limited</td>
-        </tr>
-        <tr>
-          <td>Restore Performance</td>
-          <td>Slow — requires rehydration</td>
-          <td>20× faster via Landing Zone</td>
-          <td>Very slow (egress cost + latency)</td>
-        </tr>
-        <tr>
-          <td>Fixed Backup Window as Data Grows</td>
-          <td class="tag-no">✗ No — window grows</td>
-          <td class="tag-yes">✓ Yes — scale-out adds compute</td>
-          <td class="tag-no">✗ Bandwidth-constrained</td>
-        </tr>
-        <tr>
-          <td>Forklift Upgrades Required</td>
-          <td class="tag-no">✗ Yes — at controller limits</td>
-          <td class="tag-yes">✓ Never — add appliances</td>
-          <td class="tag-yes">✓ N/A</td>
-        </tr>
-        <tr>
-          <td>Ransomware Air Gap</td>
-          <td class="tag-no">✗ None — all data on network</td>
-          <td class="tag-yes">✓ Non-network-facing tier</td>
-          <td class="tag-partial">~ Provider-dependent</td>
-        </tr>
-        <tr>
-          <td>Immutable Backup Objects</td>
-          <td class="tag-no">✗ Unclear</td>
-          <td class="tag-yes">✓ RTL + S3 Object Lock</td>
-          <td class="tag-partial">~ Varies by provider</td>
-        </tr>
-        <tr>
-          <td>Deduplication Ratio</td>
-          <td>14:1</td>
-          <td>Up to 20:1 global dedupe</td>
-          <td>Varies</td>
-        </tr>
-        <tr>
-          <td>DR Site System Size</td>
-          <td>Same-size system required</td>
-          <td>Half-size system sufficient</td>
-          <td>Subscription-based</td>
-        </tr>
-        <tr>
-          <td>Max Full Backup</td>
-          <td>1.6 PB</td>
-          <td>6 PB</td>
-          <td>Theoretically unlimited</td>
-        </tr>
-        <tr>
-          <td>Veeam Integration</td>
-          <td>Standard</td>
-          <td>Deepest — SOBR + Data Mover</td>
-          <td>Object store only</td>
-        </tr>
-        <tr>
-          <td>NCUA / Regulatory Posture</td>
-          <td class="tag-partial">~ Partial</td>
-          <td class="tag-yes">✓ Strong — audit defensible</td>
-          <td class="tag-partial">~ Requires architecture work</td>
-        </tr>
-        <tr>
-          <td>Learning Curve / Transition Risk</td>
-          <td>None (incumbent)</td>
-          <td>Minimal — parallel deploy + POC</td>
-          <td>High — new workflows</td>
-        </tr>
-        <tr>
-          <td>CapEx Predictability</td>
-          <td>Low — shock events at EOL</td>
-          <td>High — linear scale-out cost</td>
-          <td>OpEx — variable with data growth</td>
-        </tr>
+        <tr><td>Ingest Performance (max system)</td><td>72–144 TB/hr</td><td>649 TB/hr (4.5–9× faster)</td><td>Bandwidth-limited</td></tr>
+        <tr><td>Restore Performance</td><td>Slow — requires rehydration</td><td>20× faster via Landing Zone</td><td>Very slow (egress cost + latency)</td></tr>
+        <tr><td>Fixed Backup Window as Data Grows</td><td class="tag-no">✗ No — window grows</td><td class="tag-yes">✓ Yes — scale-out adds compute</td><td class="tag-no">✗ Bandwidth-constrained</td></tr>
+        <tr><td>Forklift Upgrades Required</td><td class="tag-no">✗ Yes — at controller limits</td><td class="tag-yes">✓ Never — add appliances</td><td class="tag-yes">✓ N/A</td></tr>
+        <tr><td>Ransomware Air Gap</td><td class="tag-no">✗ None — all data on network</td><td class="tag-yes">✓ Non-network-facing tier</td><td class="tag-partial">~ Provider-dependent</td></tr>
+        <tr><td>Immutable Backup Objects</td><td class="tag-no">✗ Unclear</td><td class="tag-yes">✓ RTL + S3 Object Lock</td><td class="tag-partial">~ Varies by provider</td></tr>
+        <tr><td>Deduplication Ratio</td><td>14:1</td><td>Up to 20:1 global dedupe</td><td>Varies</td></tr>
+        <tr><td>DR Site System Size</td><td>Same-size system required</td><td>Half-size system sufficient</td><td>Subscription-based</td></tr>
+        <tr><td>Max Full Backup</td><td>1.6 PB</td><td>6 PB</td><td>Theoretically unlimited</td></tr>
+        <tr><td>Veeam Integration</td><td>Standard</td><td>Deepest — SOBR + Data Mover</td><td>Object store only</td></tr>
+        <tr><td>NCUA / Regulatory Posture</td><td class="tag-partial">~ Partial</td><td class="tag-yes">✓ Strong — audit defensible</td><td class="tag-partial">~ Requires architecture work</td></tr>
+        <tr><td>Learning Curve / Transition Risk</td><td>None (incumbent)</td><td>Minimal — parallel deploy + POC</td><td>High — new workflows</td></tr>
+        <tr><td>CapEx Predictability</td><td>Low — shock events at EOL</td><td>High — linear scale-out cost</td><td>OpEx — variable with data growth</td></tr>
       </tbody>
     </table>
   </div>
@@ -986,6 +1233,211 @@
   </div>
   <div class="ncua-note reveal">
     <strong>NCUA Relevance:</strong> This architecture directly supports NCUA examination posture, business continuity planning requirements, and member confidence. Immutable, air-gapped backups provide demonstrable recovery capabilities that examiners expect to see documented.
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="calc-section">
+  <div class="section-label">Capacity Sizing Tool</div>
+  <div class="section-title">Veeam Backup Storage Calculator</div>
+  <p class="section-lead">This calculator shows the true amount of disk capacity required to store Veeam backups with ReFS/XFS. Use it to validate that any proposed solution is properly sized for your retention requirements.</p>
+
+  <div class="calc-container reveal">
+    <div class="calc-grid">
+      <!-- INPUTS -->
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label>Full Backup Size (TB)</label>
+          <input type="number" id="fullBackupTB" value="500" min="1" step="10">
+          <span class="hint">Sum from all sites if cross-protecting</span>
+        </div>
+        <div class="input-group">
+          <label>Yearly Data Growth Rate</label>
+          <select id="growthRate">
+            <option value="0">0%</option>
+            <option value="0.01">1%</option><option value="0.02">2%</option><option value="0.03">3%</option>
+            <option value="0.04">4%</option><option value="0.05">5%</option><option value="0.06">6%</option>
+            <option value="0.07">7%</option><option value="0.08">8%</option><option value="0.09">9%</option>
+            <option value="0.1" selected>10%</option><option value="0.15">15%</option><option value="0.2">20%</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Years of Included Growth</label>
+          <select id="growthYears">
+            <option value="0">0</option><option value="1" selected>1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Using ReFS or XFS?</label>
+          <select id="useReFS">
+            <option value="Yes" selected>Yes — 2× block cloning benefit</option>
+            <option value="No">No — standard dedup only</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Deployment</label>
+          <select id="numSites">
+            <option value="1">Single Site</option>
+            <option value="2" selected>Two Sites (Veeam Replication)</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Weeks of Daily Incrementals</label>
+          <select id="weeksInc">
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+            <option value="4" selected>4</option><option value="5">5</option><option value="6">6</option><option value="8">8</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Weekly Full / Synthetic Copies</label>
+          <input type="number" id="weeklyFulls" value="8" min="0" max="52">
+        </div>
+        <div class="input-group">
+          <label>Monthly Full Copies</label>
+          <input type="number" id="monthlyFulls" value="9" min="0" max="24">
+        </div>
+        <div class="input-group">
+          <label>Yearly Full Copies</label>
+          <input type="number" id="yearlyFulls" value="1" min="0" max="10">
+        </div>
+        <div class="input-group">
+          <label>Daily Incremental Change Rate (%)</label>
+          <select id="changeRate">
+            <option value="0.03">3%</option><option value="0.05">5%</option>
+            <option value="0.10" selected>10%</option><option value="0.15">15%</option><option value="0.20">20%</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Veeam Deduplication Ratio (X:1)</label>
+          <select id="veeamDedup">
+            <option value="1.5">1.5:1</option><option value="2" selected>2:1</option>
+            <option value="2.5">2.5:1</option><option value="3">3:1</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="calc-results">
+        <div class="result-box">
+          <div class="result-label">Full Backup Size (with growth)</div>
+          <div class="result-value tb" id="r-fullBackup">550 TB</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">Net Retained Copies</div>
+          <div class="result-value copies" id="r-netCopies">16</div>
+          <div class="result-detail" id="r-copyDetail"></div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">Overall Veeam Dedup (with block cloning)</div>
+          <div class="result-value copies" id="r-overallDedup">4:1</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">Total Disk Capacity Required (Straight Disk / ReFS/XFS)</div>
+          <div class="result-value cost" id="r-diskRequired">5,280 TB</div>
+          <div class="result-detail" id="r-diskDetail"></div>
+        </div>
+        <div class="calc-chart">
+          <h4>Cumulative Storage by Retention Copy</h4>
+          <div class="bar-chart" id="barChart"></div>
+        </div>
+        <button class="breakdown-toggle" id="toggleBreakdown">Show Week-by-Week Breakdown ▾</button>
+        <div class="breakdown-table-wrap" id="breakdownWrap">
+          <table class="breakdown-table" id="breakdownTable">
+            <thead><tr><th>Copy #</th><th>Full/Synth (TB)</th><th>Mon-Fri Inc (TB)</th><th>Weekend Inc (TB)</th><th>Weekly Total (TB)</th><th>Cumulative (TB)</th></tr></thead>
+            <tbody id="breakdownBody"></tbody>
+          </table>
+        </div>
+        <div class="calc-note">
+          <strong>Why this matters:</strong> A competitor may quote a lower price — but if they haven't sized enough capacity for your actual retention policy, you'll run out of storage and face costly upgrades or reduced retention. This calculator shows the real capacity requirement so you can compare apples to apples.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXAGRID SIZING -->
+<section id="sizing" class="sizing-section">
+  <div class="section-label">ExaGrid Sizing</div>
+  <div class="section-title">How ExaGrid Sizes This Capacity</div>
+  <p class="section-lead">ExaGrid's 10:1 additional deduplication dramatically reduces the physical storage required — and the DR site only needs half the capacity of the primary.</p>
+
+  <div class="sizing-grid reveal">
+    <div class="sizing-card primary">
+      <div class="sizing-badge">Primary Site</div>
+      <h3>Production ExaGrid System</h3>
+      <div class="sizing-stat">
+        <span class="stat-label">Straight Disk Capacity Required</span>
+        <span class="stat-value gold" id="sz-straightDisk">5,280 TB</span>
+      </div>
+      <div class="sizing-stat">
+        <span class="stat-label">ExaGrid Deduplication</span>
+        <span class="stat-value green">10:1</span>
+      </div>
+      <div class="sizing-stat">
+        <span class="stat-label">ExaGrid Landing Zone (most recent backup)</span>
+        <span class="stat-value green" id="sz-landingZone">550 TB</span>
+      </div>
+      <div class="sizing-stat">
+        <span class="stat-label">ExaGrid Repository Tier (deduplicated retention)</span>
+        <span class="stat-value green" id="sz-repoTier">528 TB</span>
+      </div>
+      <div class="sizing-stat" style="border-bottom:2px solid rgba(106,200,154,0.4);padding-bottom:0.8rem;margin-bottom:0.3rem">
+        <span class="stat-label"><strong>Total ExaGrid Primary Capacity</strong></span>
+        <span class="stat-value green" id="sz-primaryTotal">1,078 TB</span>
+      </div>
+    </div>
+    <div class="sizing-card dr">
+      <div class="sizing-badge">Disaster Recovery Site</div>
+      <h3>Half-Size DR System</h3>
+      <div class="sizing-stat">
+        <span class="stat-label">Primary Site Capacity</span>
+        <span class="stat-value teal" id="sz-drReference">1,078 TB</span>
+      </div>
+      <div class="sizing-stat">
+        <span class="stat-label">DR Sizing Factor</span>
+        <span class="stat-value teal">½ (50%)</span>
+      </div>
+      <div class="sizing-stat" style="border-bottom:2px solid rgba(24,180,160,0.4);padding-bottom:0.8rem;margin-bottom:0.3rem">
+        <span class="stat-label"><strong>Total ExaGrid DR Capacity</strong></span>
+        <span class="stat-value teal" id="sz-drTotal">539 TB</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.82rem;color:var(--muted);line-height:1.6">
+        ExaGrid replicates deduplicated data to the DR site, requiring only a half-size system. HPE StoreOnce requires the same-sized system at both sites — doubling your capital exposure.
+      </div>
+    </div>
+  </div>
+
+  <div class="sizing-total reveal">
+    <div>
+      <div class="total-label">Total ExaGrid Capacity (Both Sites)</div>
+      <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem">Primary + Half-Size DR</div>
+    </div>
+    <div class="total-value" id="sz-grandTotal">1,617 TB</div>
+  </div>
+
+  <div class="sizing-bar-compare reveal">
+    <h4>Storage Footprint Comparison</h4>
+    <div class="compare-bar-row">
+      <div class="cbar-label" style="color:#e8857b">Straight Disk</div>
+      <div class="cbar-track"><div class="cbar-fill straight" id="bar-straight" style="width:0%"></div></div>
+    </div>
+    <div class="compare-bar-row">
+      <div class="cbar-label" style="color:#6ec89a">ExaGrid (both sites)</div>
+      <div class="cbar-track"><div class="cbar-fill exagrid" id="bar-exagrid" style="width:0%"></div></div>
+    </div>
+    <div style="margin-top:1rem;display:flex;justify-content:center;gap:2rem;font-size:0.82rem;">
+      <span style="color:var(--muted)">Storage Reduction:</span>
+      <span style="color:#6ec89a;font-weight:700;font-family:'JetBrains Mono',monospace" id="sz-reduction">69%</span>
+    </div>
+  </div>
+
+  <div class="sizing-note reveal">
+    <strong>Key Insight:</strong> ExaGrid's 10:1 deduplication in the Repository Tier, combined with a full-speed Landing Zone for the most recent backup and a half-size DR system, means Safe CU needs a fraction of the raw storage that a straight disk or HPE StoreOnce deployment would require. This directly translates to lower CapEx, lower power/cooling, and lower rack footprint.
   </div>
 </section>
 
@@ -1024,14 +1476,14 @@
 
 <!-- MIGRATION -->
 <section id="migration">
-  <div class="section-label">Addressing Past Concerns</div>
+  <div class="section-label">Deployment Path</div>
   <div class="section-title">Zero Disruption Migration Path</div>
-  <p class="section-lead">Safe CU previously stayed with HPE to avoid learning curve and transition risk. This structured path removes that risk entirely — no cutover until you're confident.</p>
+  <p class="section-lead">A structured deployment approach that removes transition risk entirely — no cutover until you're confident.</p>
   <div class="migration-steps reveal">
     <div class="step">
       <div class="step-number">1</div>
       <h3>Parallel Install</h3>
-      <p>ExaGrid deployed alongside existing StoreOnce. No removal until fully validated and staff comfortable.</p>
+      <p>ExaGrid deployed alongside existing infrastructure. No removal until fully validated and staff comfortable.</p>
     </div>
     <div class="step">
       <div class="step-number">2</div>
@@ -1045,8 +1497,8 @@
     </div>
     <div class="step">
       <div class="step-number">4</div>
-      <h3>Decommission StoreOnce</h3>
-      <p>Remove old hardware only after full confidence in ExaGrid performance — on your schedule, not ours.</p>
+      <h3>Full Production</h3>
+      <p>Cut over to ExaGrid as primary on your schedule — only when you have full confidence in performance and operations.</p>
     </div>
   </div>
   <div class="poc-box reveal">
@@ -1068,7 +1520,7 @@
   <ol class="steps-list reveal">
     <li>
       <div class="step-num">1</div>
-      <div class="step-text">Confirm current StoreOnce model, capacity, growth rate, retention policy, and DR configuration — to right-size the ExaGrid solution accurately.</div>
+      <div class="step-text">Confirm current backup platform model, capacity, growth rate, retention policy, and DR configuration — to right-size the ExaGrid solution accurately.</div>
     </li>
     <li>
       <div class="step-num">2</div>
@@ -1090,8 +1542,8 @@
 
   <div style="margin-top: 3rem; padding: 2.5rem; background: var(--navy); border: 1px solid var(--border); border-radius: 8px; text-align: center;" class="reveal">
     <div style="font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.8rem; font-weight: 700;">Ready to take the next step?</div>
-    <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.8rem; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto;">Contact your E-Plus account team to schedule the CIO/CFO briefing or initiate the proof of concept.</p>
-    <a href="mailto:jleone@exagrid.com; Kat.Thoele@eplus.com; elasota@exagrid.com; ben.eckels@eplus.com" class="cta-btn">Contact E-Plus Technology</a>
+    <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.8rem; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto;">Contact your E-Plus account team to schedule the executive briefing or initiate the proof of concept.</p>
+    <a href="#" class="cta-btn" onclick="return false;">Contact E-Plus Technology</a>
   </div>
 </section>
 
@@ -1108,39 +1560,162 @@
 </footer>
 
 <script>
-  // Intersection Observer for reveal animations
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+// ─── CALCULATOR LOGIC ───
+function calculate() {
+  const fullTB = parseFloat(document.getElementById('fullBackupTB').value) || 0;
+  const growth = parseFloat(document.getElementById('growthRate').value);
+  const years = parseInt(document.getElementById('growthYears').value);
+  const refs = document.getElementById('useReFS').value;
+  const sites = parseInt(document.getElementById('numSites').value);
+  const weeksInc = parseInt(document.getElementById('weeksInc').value);
+  const weekly = parseInt(document.getElementById('weeklyFulls').value) || 0;
+  const monthly = parseInt(document.getElementById('monthlyFulls').value) || 0;
+  const yearly = parseInt(document.getElementById('yearlyFulls').value) || 0;
+  const changeRate = parseFloat(document.getElementById('changeRate').value);
+  const veeamDedup = parseFloat(document.getElementById('veeamDedup').value);
 
-  reveals.forEach(el => observer.observe(el));
+  const fullWithGrowth = fullTB * Math.pow(1 + growth, years);
+  const overallDedup = refs === 'Yes' ? veeamDedup * 2 : veeamDedup;
 
-  // Active nav link highlighting
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const overlapWM = monthly === 0 ? 0 : Math.floor(weekly / 4);
+  const overlapMY = yearly === 0 ? 0 : Math.floor(monthly / 12);
+  const netCopies = weekly + monthly + yearly - overlapWM - overlapMY;
 
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.style.color = '';
-          if (link.getAttribute('href') === '#' + entry.target.id) {
-            link.style.color = 'var(--accent-light)';
-          }
-        });
-      }
-    });
-  }, { threshold: 0.4 });
+  // Build week-by-week
+  const rows = [];
+  let cumulative = 0;
+  for (let copy = 1; copy <= Math.max(netCopies, 20); copy++) {
+    let fullPart, incMF, incWE;
+    if (copy === 1) {
+      fullPart = fullWithGrowth / overallDedup * sites + fullWithGrowth * 0.2;
+    } else {
+      fullPart = fullWithGrowth / overallDedup * sites;
+    }
+    if (copy <= weeksInc) {
+      incMF = changeRate * fullWithGrowth / overallDedup * sites * 5;
+      incWE = changeRate * fullWithGrowth / overallDedup * sites * 2;
+    } else {
+      incMF = 0; incWE = 0;
+    }
+    const weekTotal = fullPart + incMF + incWE;
+    cumulative += weekTotal;
+    rows.push({ copy, fullPart, incMF, incWE, weekTotal, cumulative });
+  }
 
-  sections.forEach(s => sectionObserver.observe(s));
+  // Display results
+  document.getElementById('r-fullBackup').textContent = fmt(fullWithGrowth) + ' TB';
+  document.getElementById('r-netCopies').textContent = netCopies;
+  document.getElementById('r-copyDetail').textContent =
+    `${weekly} weekly + ${monthly} monthly + ${yearly} yearly − ${overlapWM + overlapMY} overlapping = ${netCopies}`;
+  document.getElementById('r-overallDedup').textContent = overallDedup + ':1';
+
+  const targetRow = rows.find(r => r.copy === netCopies) || rows[rows.length - 1];
+  const diskReq = targetRow.cumulative;
+  document.getElementById('r-diskRequired').textContent = fmt(diskReq) + ' TB';
+  document.getElementById('r-diskDetail').textContent =
+    `Minimum usable storage any vendor must provide for ${netCopies} retention copies`;
+
+  // Bar chart
+  const chartMax = Math.min(netCopies, 20);
+  const maxVal = rows[chartMax - 1]?.cumulative || 1;
+  document.getElementById('barChart').innerHTML = rows.slice(0, chartMax).map(r => {
+    const pct = (r.cumulative / maxVal * 100).toFixed(1);
+    return `<div class="bar-row">
+      <span class="bar-label">#${r.copy}</span>
+      <div class="bar-track"><div class="bar-fill disk" style="width:${pct}%"></div></div>
+      <span class="bar-value">${fmt(r.cumulative)} TB</span>
+    </div>`;
+  }).join('');
+
+  // Breakdown table
+  document.getElementById('breakdownBody').innerHTML = rows.slice(0, Math.max(netCopies + 2, 10)).map(r => {
+    const hl = r.copy === netCopies ? ' class="highlight-row"' : '';
+    return `<tr${hl}>
+      <td>${r.copy}</td><td>${fmt(r.fullPart)}</td><td>${r.incMF ? fmt(r.incMF) : '—'}</td>
+      <td>${r.incWE ? fmt(r.incWE) : '—'}</td><td>${fmt(r.weekTotal)}</td><td>${fmt(r.cumulative)}</td>
+    </tr>`;
+  }).join('');
+
+  // ─── EXAGRID SIZING ───
+  const exaDedup = 10; // 10:1 ExaGrid deduplication
+  const landingZone = fullWithGrowth * sites; // Full undeduplicated most recent backup for both sites
+  const repoTier = diskReq / exaDedup; // All retention deduplicated at 10:1
+  const primaryTotal = landingZone + repoTier;
+  const drTotal = primaryTotal / 2; // Half-size DR
+  const grandTotal = primaryTotal + drTotal;
+  // Straight disk for both sites (already factored in calculator, but for comparison also note 2x for DR with competitors)
+  const straightDiskBothSites = diskReq * (sites === 2 ? 1 : 2); // calculator already factors two-site
+
+  document.getElementById('sz-straightDisk').textContent = fmt(diskReq) + ' TB';
+  document.getElementById('sz-landingZone').textContent = fmt(landingZone) + ' TB';
+  document.getElementById('sz-repoTier').textContent = fmt(repoTier) + ' TB';
+  document.getElementById('sz-primaryTotal').textContent = fmt(primaryTotal) + ' TB';
+  document.getElementById('sz-drReference').textContent = fmt(primaryTotal) + ' TB';
+  document.getElementById('sz-drTotal').textContent = fmt(drTotal) + ' TB';
+  document.getElementById('sz-grandTotal').textContent = fmt(grandTotal) + ' TB';
+
+  // Comparison bars
+  const barMax = diskReq;
+  const straightPct = 100;
+  const exagridPct = (grandTotal / barMax * 100).toFixed(1);
+  const reductionPct = ((1 - grandTotal / barMax) * 100).toFixed(0);
+
+  setTimeout(() => {
+    document.getElementById('bar-straight').style.width = straightPct + '%';
+    document.getElementById('bar-straight').textContent = fmt(diskReq) + ' TB';
+    document.getElementById('bar-exagrid').style.width = Math.min(exagridPct, 100) + '%';
+    document.getElementById('bar-exagrid').textContent = fmt(grandTotal) + ' TB';
+  }, 300);
+
+  document.getElementById('sz-reduction').textContent = reductionPct + '% less storage';
+}
+
+function fmt(n) {
+  return n.toLocaleString('en-US', { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+}
+
+// Event listeners
+document.querySelectorAll('#calculator input, #calculator select').forEach(el => {
+  el.addEventListener('change', calculate);
+  el.addEventListener('input', calculate);
+});
+
+document.getElementById('toggleBreakdown').addEventListener('click', function() {
+  const wrap = document.getElementById('breakdownWrap');
+  wrap.classList.toggle('open');
+  this.textContent = wrap.classList.contains('open') ? 'Hide Breakdown ▴' : 'Show Week-by-Week Breakdown ▾';
+});
+
+// Reveal animations
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// Active nav
+const navLinks = document.querySelectorAll('.nav-links a');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + entry.target.id) {
+          link.style.color = 'var(--accent-light)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px -50% 0px' });
+document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
+
+// Init
+calculate();
 </script>
 </body>
 </html>
